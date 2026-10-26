@@ -1,0 +1,72 @@
+/* Наш кастомный лофт-цвет (глубокий кофейно-коричневый) */
+.bg-loft {
+    background-color: #3e2723 !important;
+}
+
+/* Цвет текста для лофта (кремовый/бежевый) */
+.text-loft-light {
+    color: #efebe9 !important;
+}
+
+/* Акцентный цвет (карамельный/янтарный) */
+.text-loft-accent {
+    color: #ffb300 !important;
+}
+
+/* Фон всей страницы (светлый бежевый, как бумага) */
+body {
+    min-height: 100vh;
+    background-color: #f4f1ea;
+}
+
+/* Карточки делаем чуть светлее фона */
+.card, .bg-light {
+    background-color: #ffffff !important;
+}
+
+/* Терракотовая кнопка для лофт-стиля */
+.btn-loft-primary {
+    background-color: #c45a3c; /* Терракотовый (кирпичный) */
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-loft-primary:hover {
+    background-color: #a3462c; /* Чуть темнее при наведении */
+    color: #ffffff;
+}
+
+/* Второстепенная кнопка (прозрачная с коричневой рамкой) */
+.btn-loft-outline {
+    background-color: transparent;
+    color: #3e2723; /* Темно-коричневый текст */
+    border: 2px solid #3e2723;
+    transition: all 0.3s ease;
+}
+
+.btn-loft-outline:hover {
+    background-color: #3e2723; /* Заливается коричневым при наведении */
+    color: #ffffff;
+}
+
+/* Стилизация аккордеона в лофт-стиле */
+.accordion-button:not(.collapsed) {
+    background-color: #eaddd3; /* Светло-коричневый фон для открытого жанра */
+    color: #3e2723; /* Темно-коричневый текст */
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+.accordion-button:focus {
+    border-color: #c45a3c;
+    box-shadow: 0 0 0 0.25rem rgba(196, 90, 60, 0.25);
+}
+
+/* Делаем заголовки в карточках аккуратнее */
+.accordion-body .card {
+    transition: transform 0.2s;
+}
+
+.accordion-body .card:hover {
+    transform: translateY(-3px);
+}

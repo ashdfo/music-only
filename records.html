@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фонотека – Music Only</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="bg-loft py-4 border-bottom border-dark border-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 text-center text-md-start">
+                    <h1 class="h3 mb-1 fw-bold text-white">Music Only</h1>
+                    <p class="mb-0 text-loft-light">Пространство для чистого звука и винила</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-loft border-bottom border-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-loft-accent" href="index.html">MO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link active text-white fw-bold" href="records.html">Фонотека</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="events.html">Лекторий</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="booking.html">Бронирование</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container my-5">
+        <h2 class="mb-4 fw-bold text-dark">Наша фонотека</h2>
+        <p class="text-muted mb-5">Выберите жанр, чтобы посмотреть доступные пластинки. Любую из них можно забронировать для прослушивания в нашем пространстве.</p>
+
+        <!-- Аккордеон жанров -->
+        <div class="accordion shadow-sm" id="accordionGenres">
+
+            <!-- 1. Классический рок -->
+            <div class="accordion-item border-0 mb-3 bg-white">
+                <h3 class="accordion-header" id="headingRock">
+                    <button class="accordion-button fw-bold text-dark bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRock" aria-expanded="true" aria-controls="collapseRock">
+                        Классический рок
+                    </button>
+                </h3>
+                <div id="collapseRock" class="accordion-collapse collapse show" aria-labelledby="headingRock" data-bs-parent="#accordionGenres">
+                    <div class="accordion-body">
+                        <div class="row g-4">
+                            <!-- Pink Floyd -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://upload.wikimedia.org/wikipedia/ru/3/3b/Dark_Side_of_the_Moon.png" class="card-img-top p-3" alt="Pink Floyd" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">The Dark Side of the Moon</h4>
+                                        <p class="text-muted small mb-2">Pink Floyd, 1973</p>
+                                        <p class="small text-muted flex-grow-1">Легендарный концептуальный альбом, который изменил представление о звуке.</p>
+                                        <a href="booking.html" class="btn btn-sm btn-loft-outline mt-3">Забронировать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- The Beatles -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://upload.wikimedia.org/wikipedia/ru/6/6a/Abbey_Road_cover.jpg" class="card-img-top p-3" alt="The Beatles" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">Abbey Road</h4>
+                                        <p class="text-muted small mb-2">The Beatles, 1969</p>
+                                        <p class="small text-muted flex-grow-1">Последний студийный альбом группы, знаменитый обложкой с переходом через дорогу.</p>
+                                        <a href="booking.html" class="btn btn-sm btn-loft-outline mt-3">Забронировать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Led Zeppelin -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://upload.wikimedia.org/wikipedia/ru/e/e3/Led_Zeppelin_IV.jpg" class="card-img-top p-3" alt="Led Zeppelin" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">Led Zeppelin IV</h4>
+                                        <p class="text-muted small mb-2">Led Zeppelin, 1971</p>
+                                        <p class="small text-muted flex-grow-1">Альбом, подаривший миру бессмертный хит "Stairway to Heaven".</p>
+                                        <a href="booking.html" class="btn btn-sm btn-loft-outline mt-3">Забронировать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Queen (Добавлен с главной) -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/1/16/Queen_The_Works.png" class="card-img-top p-3" alt="Queen" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">The Works</h4>
+                                        <p class="text-muted small mb-2">Queen, 1984</p>
+                                        <p class="small text-muted flex-grow-1">Альбом, включивший в себя хит "Radio Ga Ga" и отражающий синтезаторное звучание 80-х.</p>
+                                        <a href="booking.html" class="btn btn-sm btn-loft-outline mt-3">Забронировать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Синти-поп -->
+            <div class="accordion-item border-0 mb-3 bg-white">
+                <h3 class="accordion-header" id="headingSynth">
+                    <button class="accordion-button collapsed fw-bold text-dark bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSynth" aria-expanded="false" aria-controls="collapseSynth">
+                        Синти-поп
+                    </button>
+                </h3>
+                <div id="collapseSynth" class="accordion-collapse collapse" aria-labelledby="headingSynth" data-bs-parent="#accordionGenres">
+                    <div class="accordion-body">
+                        <div class="row g-4">
+                            <!-- Depeche Mode (Violator) -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://upload.wikimedia.org/wikipedia/ru/1/1e/Depeche_Mode_-_Violator.jpg" class="card-img-top p-3" alt="Depeche Mode" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">Violator</h4>
+                                        <p class="text-muted small mb-2">Depeche Mode, 1990</p>
+                                        <p class="small text-muted flex-grow-1">Коммерчески успешный альбом, вобравший в себя лучшие черты электронной музыки.</p>
+                                        <a href="booking.html" class="btn btn-sm btn-loft-outline mt-3">Забронировать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tears for Fears -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/TearsForFearsTheHurting.jpg" class="card-img-top p-3" alt="Tears for Fears" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">The Hurting</h4>
+                                        <p class="text-muted small mb-2">Tears for Fears, 1983</p>
+                                        <p class="small text-muted flex-grow-1">Дебютный альбом, ставший классикой новой волны.</p>
+                                        <a href="booking.html" class="btn btn-sm btn-loft-outline mt-3">Забронировать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Depeche Mode (Music For The Masses - Добавлен с главной) -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/0/0e/DepecheModeMusicForTheMasses.jpg" class="card-img-top p-3" alt="Depeche Mode" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">Music For The Masses</h4>
+                                        <p class="text-muted small mb-2">Depeche Mode, 1987</p>
+                                        <p class="small text-muted flex-grow-1">Один из самых значимых альбомов группы, принесший им мировую известность.</p>
+                                        <a href="booking.html" class="btn btn-sm btn-loft-outline mt-3">Забронировать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Рэп -->
+            <div class="accordion-item border-0 mb-3 bg-white">
+                <h3 class="accordion-header" id="headingRap">
+                    <button class="accordion-button collapsed fw-bold text-dark bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRap" aria-expanded="false" aria-controls="collapseRap">
+                        Рэп
+                    </button>
+                </h3>
+                <div id="collapseRap" class="accordion-collapse collapse" aria-labelledby="headingRap" data-bs-parent="#accordionGenres">
+                    <div class="accordion-body">
+                        <div class="row g-4">
+                            <!-- Nas -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/1/14/NasIllmatic.jpg" class="card-img-top p-3" alt="Nas" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">Illmatic</h4>
+                                        <p class="text-muted small mb-2">Nas, 1994</p>
+                                        <p class="small text-muted flex-grow-1">Дебютный альбом, считающийся одной из величайших работ в истории хип-хопа.</p>
+                                        <a href="booking.html" class="btn btn-sm btn-loft-outline mt-3">Забронировать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Dr. Dre -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/6/60/DrDre2001.jpg" class="card-img-top p-3" alt="Dr. Dre" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">2001</h4>
+                                        <p class="text-muted small mb-2">Dr. Dre, 1999</p>
+                                        <p class="small text-muted flex-grow-1">Второй студийный альбом легендарного продюсера, определивший звучание Западного побережья.</p>
+                                        <a href="booking.html" class="btn btn-sm btn-loft-outline mt-3">Забронировать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Offset (Добавлен с главной) -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/5/5b/Offset_-_Set_It_Off.png" class="card-img-top p-3" alt="Offset" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">SET IT OFF</h4>
+                                        <p class="text-muted small mb-2">Offset, 2023</p>
+                                        <p class="small text-muted flex-grow-1">Второй сольный студийный альбом американского рэпера, сочетающий трэп и современный хип-хоп.</p>
+                                        <a href="booking.html" class="btn btn-sm btn-loft-outline mt-3">Забронировать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Ню-метал -->
+            <div class="accordion-item border-0 mb-3 bg-white">
+                <h3 class="accordion-header" id="headingNuMetal">
+                    <button class="accordion-button collapsed fw-bold text-dark bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNuMetal" aria-expanded="false" aria-controls="collapseNuMetal">
+                        Ню-метал
+                    </button>
+                </h3>
+                <div id="collapseNuMetal" class="accordion-collapse collapse" aria-labelledby="headingNuMetal" data-bs-parent="#accordionGenres">
+                    <div class="accordion-body">
+                        <div class="row g-4">
+                            <!-- Linkin Park -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/2/2a/Linkin_Park_Hybrid_Theory_Album_Cover.jpg" class="card-img-top p-3" alt="Linkin Park" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">Hybrid Theory</h4>
+                                        <p class="text-muted small mb-2">Linkin Park, 2000</p>
+                                        <p class="small text-muted flex-grow-1">Прорывной дебютный альбом, смешавший рэп, метал и электронику.</p>
+                                        <a href="booking.html" class="btn btn-sm btn-loft-outline mt-3">Забронировать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- System of a Down -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/System_of_a_Down_-_Toxicity.png" class="card-img-top p-3" alt="System of a Down" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">Toxicity</h4>
+                                        <p class="text-muted small mb-2">System of a Down, 2001</p>
+                                        <p class="small text-muted flex-grow-1">Альбом с уникальным звучанием, сочетающий агрессию и необычные вокальные партии.</p>
+                                        <a href="booking.html" class="btn btn-sm btn-loft-outline mt-3">Забронировать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="bg-loft py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <div class="col-12 col-md-6">
+                    <p class="mb-0 text-loft-light">&copy; 2026 Music Only</p>
+                </div>
+                <div class="col-12 col-md-6 text-md-end">
+                    <a class="text-white-50 text-decoration-none me-3" href="records.html">Фонотека</a>
+                    <a class="text-white-50 text-decoration-none" href="booking.html">Бронирование</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
