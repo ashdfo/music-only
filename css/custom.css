@@ -70,3 +70,38 @@ body {
 .accordion-body .card:hover {
     transform: translateY(-3px);
 }
+
+/* Контейнер для пластинки (задает размеры) */
+.hero-vinyl-container {
+    width: 300px;      /* Ширина пластинки */
+    height: 300px;
+    margin: 0 auto;    /* Центрирование */
+}
+
+/* Сама анимация вращения */
+@keyframes spin-vinyl {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Стили для пластинки */
+.vinyl-record {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    /* Запускаем анимацию: 4 секунды на один оборот, бесконечно, с плавностью */
+    animation: spin-vinyl 4s linear infinite;
+
+    /* Эффект объема */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Останавливаем вращение при наведении мыши (чтобы можно было рассмотреть) */
+.vinyl-record:hover {
+    animation-play-state: paused;
+}
