@@ -10,7 +10,7 @@
 <body>
 
     <!-- Навигация -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-loft border-bottom border-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-loft border-bottom border-dark py-3">
         <div class="container">
             <a class="navbar-brand fw-bold text-white" href="index.html">MO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
@@ -29,66 +29,166 @@
 
     <!-- Основной контент -->
     <main class="container my-5">
-        <h2 class="mb-4 fw-bold text-dark">Афиша лектория</h2>
-        <p class="text-muted mb-5">В нашем пространстве регулярно проходят лекции о музыке, истории винила и аудиотехнике. Присоединяйтесь!</p>
+        <div class="text-center mb-5">
+            <h1 class="fw-bold text-dark display-5">Афиша лектория</h1>
+            <p class="text-muted lead">Узнавайте новое о музыке в нашем уютном пространстве.</p>
+        </div>
 
-        <div class="row g-4">
-            <!-- Событие 1 -->
-            <div class="col-12 col-lg-8">
-                <div class="card border-0 shadow-sm mb-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+
+                                                                               <!-- Лекция 1: Алексей Смирнов -->
+                <div class="card shadow-sm mb-4 bg-white" style="border: 1px solid #e0e0e0;">
                     <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-dark fs-6">12 Ноября, 19:00</span>
-                            <span class="text-muted small">Свободно 15 мест</span>
+                        <div class="row align-items-center g-4">
+                            <div class="col-12 col-md-3 text-center border-end border-light-subtle">
+                                <h2 class="display-5 fw-bold mb-0" style="color: #3e2723;">12</h2>
+                                <p class="text-uppercase text-muted fw-bold mb-1">Нояб, 19:00</p>
+                                <span class="text-muted small">Свободно 15 мест</span>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <h3 class="h4 fw-bold text-dark mb-2">История аналогового звука</h3>
+                                <p class="text-muted mb-3">Поговорим о том, как винил покорил мир, почему он вернулся в моду и чем отличается звучание аналога от цифры.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="booking.html" class="btn btn-loft-primary">Записаться на лекцию</a>
+                                    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#lecturerModal"
+                                            data-lecturer-name="Алексей Смирнов"
+                                            data-lecturer-role="Коллекционер, завсегдатай Music Only"
+                                            data-lecturer-bio="Алексей — легенда нашего пространства. Он был одним из первых гостей, кто помогал расставлять колонки, когда пространство только открывалось. Его личная коллекция насчитывает более 400 пластинок. Он с радостью делится историями о том, как искал редкие экземпляры по всему миру. На его лекциях всегда аншлаг, ведь он умеет рассказывать о сложном простыми словами, приправляя все отменным юмором."
+                                            data-lecturer-img="https://i.pinimg.com/1200x/3a/b1/fa/3ab1faa6dfc437b2e9da0086f7efc480.jpg">
+                                        О лекторе
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="h4 fw-bold text-dark">История аналогового звука</h3>
-                        <p class="text-muted">Поговорим о том, как винил покорил мир, почему он вернулся в моду и чем отличается звучание аналога от цифры. Спикер: коллекционер и аудиофил Алексей Смирнов.</p>
-                        <a href="booking.html" class="btn btn-loft-primary">Записаться на лекцию</a>
                     </div>
                 </div>
-            </div>
 
-            <!-- Событие 2 -->
-            <div class="col-12 col-lg-8">
-                <div class="card border-0 shadow-sm mb-4">
+                <!-- Лекция 2: Андрей Клихофф -->
+                <div class="card shadow-sm mb-4 bg-white" style="border: 1px solid #e0e0e0;">
                     <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-dark fs-6">19 Ноября, 18:30</span>
-                            <span class="text-muted small">Свободно 5 мест</span>
+                        <div class="row align-items-center g-4">
+                            <div class="col-12 col-md-3 text-center border-end border-light-subtle">
+                                <h2 class="display-5 fw-bold mb-0" style="color: #3e2723;">19</h2>
+                                <p class="text-uppercase text-muted fw-bold mb-1">Нояб, 18:30</p>
+                                <span class="text-muted small">Осталось 5 мест</span>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <h3 class="h4 fw-bold text-dark mb-2">Синтезаторы 80-х: как создавался синти-поп</h3>
+                                <p class="text-muted mb-3">Разбираем легендарные треки Depeche Mode, Kraftwerk и New Order. Как простые настройки синтезаторов изменили музыку навсегда.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="booking.html" class="btn btn-loft-primary">Записаться на лекцию</a>
+                                    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#lecturerModal"
+                                            data-lecturer-name="Андрей Клихофф"
+                                            data-lecturer-role="Экс-продюсер Warner Records"
+                                            data-lecturer-bio="Андрей прошел путь от рядового сотрудника тогда ещё Warner Bros. Records до хорошо известного саунд-продюсера многих синти-поп групп. На его лекциях вы узнаете, как из простого синтезатора и упрямства рождались мировые шедевры и как отличить Arturia MicroFreak от Arturia MiniFreak."
+                                            data-lecturer-img="https://i.pinimg.com/1200x/e2/26/05/e226058a6484c9b6012fe7214f52f2fa.jpg">
+                                        О лекторе
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="h4 fw-bold text-dark">Синтезаторы 80-х: как создавался синти-поп</h3>
-                        <p class="text-muted">Разбираем легендарные треки Depeche Mode, Kraftwerk и New Order. Как простые настройки синтезаторов изменили музыку навсегда.</p>
-                        <a href="booking.html" class="btn btn-loft-primary">Записаться на лекцию</a>
                     </div>
                 </div>
-            </div>
 
-            <!-- Событие 3 -->
-            <div class="col-12 col-lg-8">
-                <div class="card border-0 shadow-sm mb-4">
+                <!-- Лекция 3: Эш -->
+                <div class="card shadow-sm mb-4 bg-light" style="border: 1px solid #e0e0e0;">
                     <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-dark fs-6">26 Ноября, 20:00</span>
-                            <span class="text-muted small">Мест нет</span>
+                        <div class="row align-items-center g-4">
+                            <div class="col-12 col-md-3 text-center border-end border-light">
+                                <h2 class="display-5 fw-bold text-muted mb-0">26</h2>
+                                <p class="text-uppercase text-muted fw-bold mb-1">Нояб, 20:00</p>
+                                <span class="badge bg-secondary mt-2">Мест нет</span>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <h3 class="h4 fw-bold text-muted mb-2">Ню-метал и культура 2000-х</h3>
+                                <p class="text-muted mb-3">Обсуждаем феномен Linkin Park, System of a Down и влияние гибридных жанров на популярную культуру поколения нулевых.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button class="btn btn-outline-secondary" disabled>Запись закрыта</button>
+                                    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#lecturerModal"
+                                            data-lecturer-name="Эш"
+                                            data-lecturer-role="Со-основатель Music Only"
+                                            data-lecturer-bio="Эш — человек, который придумал концепцию «If music than music only». Именно она настояла на том, чтобы в пространстве была только музыка. Эш — поклонница тяжёлой музыки, ню-метала нулевых, а также помощник звукорежиссера в Останкино, а её лекции проходят как настоящие рок-концерты: громко, эмоционально и с гитарой в руках."
+                                            data-lecturer-img="https://i.pinimg.com/1200x/a6/f1/95/a6f1953798e8a99ab1f62fee1f04ca71.jpg">
+                                        О лекторе
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="h4 fw-bold text-dark">Ню-метал и культура 2000-х</h3>
-                        <p class="text-muted">Обсуждаем феномен Linkin Park, System of a Down и влияние гибридных жанров на популярную культуру поколения нулевых.</p>
-                        <button class="btn btn-secondary" disabled>Мест нет</button>
                     </div>
+                </div>
+                                <!-- Лекция 4: Про азиатский рэп -->
+                <div class="card shadow-sm mb-4 bg-white" style="border: 1px solid #e0e0e0;">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center g-4">
+                            <div class="col-12 col-md-3 text-center border-end border-light-subtle">
+                                <h2 class="display-5 fw-bold mb-0" style="color: #3e2723;">03</h2>
+                                <p class="text-uppercase text-muted fw-bold mb-1">Дек, 18:00</p>
+                                <span class="text-muted small">Свободно 20 мест</span>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <h3 class="h4 fw-bold text-dark mb-2">Китайский рэп: от андерграунда до стадионов</h3>
+                                <p class="text-muted mb-3">Как азиатский хип-хоп завоевал мир. Разбираем феномен ICE, SKAI ISYOURGOD и влияние восточной культуры на современный бит.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="booking.html" class="btn btn-loft-primary">Записаться на лекцию</a>
+                                    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#lecturerModal"
+                                            data-lecturer-name="Илья Ветров"
+                                            data-lecturer-role="Бит-мейкер в DAO Music Entertaiment"
+                                            data-lecturer-bio="Илья уже более 7 лет работает в крупнейшем лейбле Вьетнама, поэтому как никто другой знает все тонкости азиатской рэп-культуры. Его лекции про азиатскую рэп-культуру, в частности, про китайских исполнителей, стали настоящим хитом. В честь выхода своей книги Илья решил вновь поделиться всеми тонкостями и секретами этой части рэп-мира."
+                                            data-lecturer-img="https://i.pinimg.com/736x/fd/d3/4e/fdd34e6c0f006571cff21bbc869de148.jpg">
+                                        О лекторе
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </main>
+    <!-- Модальное окно лектора -->
+        <!-- Модальное окно лектора -->
+    <div class="modal fade" id="lecturerModal" tabindex="-1" aria-labelledby="lecturerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-loft text-white border-bottom border-dark">
+                    <h5 class="modal-title fw-bold" id="lecturerModalLabel">Имя лектора</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body text-center p-4">
+
+                    <!-- Фото лектора (правильно закрытый тег img) -->
+                    <img id="lecturerModalImg" src="" alt="Фото лектора" class="rounded-circle mb-3 shadow-sm" style="width: 120px; height: 120px; object-fit: cover; background-color: #e9ecef;">
+
+                    <h6 class="text-dark fw-bold mb-3" id="lecturerModalRole">Роль</h6>
+                    <p class="text-muted" id="lecturerModalBio">Описание...</p>
+                </div>
+                <div class="modal-footer border-top-0 justify-content-center pb-4">
+                    <button type="button" class="btn btn-outline-dark px-4" data-bs-dismiss="modal">Закрыть</button>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 
-   <footer class="bg-loft text-loft-light py-5 mt-5">
+    <!-- Подвал -->
+    <footer class="bg-loft text-loft-light py-5 mt-5 border-top border-dark">
         <div class="container">
-            <div class="row g-4">
+            <div class="row g-4 justify-content-between">
+
+                <!-- 1. Бренд, слоган и права -->
                 <div class="col-12 col-md-4">
                     <h5 class="text-white fw-bold mb-3">Music Only</h5>
-                    <p class="small text-white-50">
-                        If music than music only
+                    <p class="small text-white-50 mb-3">
+                        MO - ваш персональный проводник в мир качественного прослушивания музыки.
+                    </p>
+                    <p class="small text-white-50 mb-4">
+                        <em>If music than music only</em>
+                    </p>
+                    <!-- Права -->
+                    <p class="small text-white-50 mb-0">
+                        &copy; 2026 Music Only. Все права защищены.
                     </p>
                 </div>
+
+                <!-- 2. Контакты -->
                 <div class="col-12 col-md-4">
                     <h5 class="text-white fw-bold mb-3">Контакты</h5>
                     <ul class="list-unstyled small text-white-50">
@@ -96,31 +196,65 @@
                         <li class="mb-2">+7(903)314-16-50</li>
                         <li class="mb-2">+7(903)283-34-71</li>
                         <li class="mb-2">itsmusiconly@inbox.ru</li>
-                        <li>Ежедневно с 12:00 до 00:00</li>
+                        <li>Ежедневно с 12:00 до 00:00 (чт - выходной)</li>
                     </ul>
                 </div>
 
+                <!-- 3. Навигация и документы -->
                 <div class="col-12 col-md-4">
                     <h5 class="text-white fw-bold mb-3">Навигация</h5>
-                    <ul class="list-unstyled small">
+                    <ul class="list-unstyled small mb-4">
                         <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Главная</a></li>
                         <li class="mb-2"><a href="records.html" class="text-white-50 text-decoration-none">Фонотека</a></li>
                         <li class="mb-2"><a href="events.html" class="text-white-50 text-decoration-none">Лекторий</a></li>
                         <li><a href="booking.html" class="text-white-50 text-decoration-none">Бронирование</a></li>
                     </ul>
-                </div>
-            </div>
 
-            <hr class="border-secondary mt-4 mb-3">
-
-            <div class="row">
-                <div class="col-12 text-center text-white-50 small">
-                    <p class="mb-0">&copy; 2026 Music Only.</p>
+                    <!-- Только документы -->
+                    <ul class="list-unstyled small text-white-50">
+                        <li class="mb-1"><a href="#" class="text-white-50 text-decoration-none">Политика конфиденциальности</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Публичная оферта</a></li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     </footer>
 
+    <!-- Скрипт Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Скрипт для подмены текста в модальном окне -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lecturerModal = document.getElementById('lecturerModal');
+            if (lecturerModal) {
+                lecturerModal.addEventListener('show.bs.modal', function (event) {
+                    const button = event.relatedTarget;
+
+                    const name = button.getAttribute('data-lecturer-name');
+                    const role = button.getAttribute('data-lecturer-role');
+                    const bio = button.getAttribute('data-lecturer-bio');
+                    const img = button.getAttribute('data-lecturer-img'); // Получаем ссылку на картинку
+
+                    const modalTitle = lecturerModal.querySelector('.modal-title');
+                    const modalRole = lecturerModal.querySelector('#lecturerModalRole');
+                    const modalBio = lecturerModal.querySelector('#lecturerModalBio');
+                    const modalImg = lecturerModal.querySelector('#lecturerModalImg'); // Находим тег img
+
+                    modalTitle.textContent = name;
+                    modalRole.textContent = role;
+                    modalBio.textContent = bio;
+
+                    // Если картинка есть, ставим её, если нет — оставляем пустой фон
+                    if (img) {
+                        modalImg.src = img;
+                    } else {
+                        modalImg.src = ""; // Или можно поставить ссылку на заглушку
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

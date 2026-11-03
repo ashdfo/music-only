@@ -56,31 +56,54 @@
             </div>
         </section>
 
-        <!-- Блок "Как всё устроено" -->
+                        <!-- Блок "Как всё устроено" -->
         <section class="container my-5 pt-4">
             <h2 class="text-center mb-5 fw-bold text-dark">Как всё устроено</h2>
+
             <div class="row g-4">
+
+                <!-- Карточка 1 -->
                 <div class="col-12 col-md-4">
-                    <div class="p-4 border rounded h-100 bg-white shadow-sm">
-                        <h3 class="h5 text-dark fw-bold border-bottom border-dark pb-2 mb-3">Полная тишина</h3>
-                        <p class="mb-0 text-muted">Во время сеанса прослушивания мы просим гостей не разговаривать, чтобы не нарушать звуковую картину.</p>
+                    <div class="card h-100 border-0 shadow-sm text-white text-center"
+                         style="background-image: url('https://i.pinimg.com/736x/6c/9f/75/6c9f75fa42f9dc02353263a82b38c81f.jpg'); background-size: cover; background-position: center; position: relative;">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(62, 39, 35, 0.75); border-radius: 0.375rem;"></div>
+
+                        <!-- Добавили justify-content-center для идеального центрирования -->
+                        <div class="card-body p-4 d-flex flex-column justify-content-center align-items-center position-relative" style="z-index: 1;">
+                            <h3 class="h5 fw-bold mb-3">Полная тишина</h3>
+                            <p class="mb-0 small">Мы просим гостей не разговаривать во время сеанса, чтобы не нарушать звуковую картину.</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Карточка 2 -->
                 <div class="col-12 col-md-4">
-                    <div class="p-4 border rounded h-100 bg-white shadow-sm">
-                        <h3 class="h5 text-dark fw-bold border-bottom border-dark pb-2 mb-3">Свой винил</h3>
-                        <p class="mb-0 text-muted">Вы можете принести свою пластинку или выбрать любую из нашей коллекции (более 100 альбомов).</p>
+                    <div class="card h-100 border-0 shadow-sm text-white text-center"
+                         style="background-image: url('https://i.pinimg.com/736x/7f/87/67/7f87678597e7bfa7e29a37dea1b86866.jpg'); background-size: cover; background-position: center; position: relative;">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(62, 39, 35, 0.75); border-radius: 0.375rem;"></div>
+
+                        <div class="card-body p-4 d-flex flex-column justify-content-center align-items-center position-relative" style="z-index: 1;">
+                            <h3 class="h5 fw-bold mb-3">Свой винил</h3>
+                            <p class="mb-0 small">Вы можете принести свою пластинку или выбрать любую из коллекции (100+ альбомов).</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Карточка 3 -->
                 <div class="col-12 col-md-4">
-                    <div class="p-4 border rounded h-100 bg-white shadow-sm">
-                        <h3 class="h5 text-dark fw-bold border-bottom border-dark pb-2 mb-3">Выбор оборудования</h3>
-                        <p class="mb-0 text-muted">При бронировании вы выбираете наушники или акустическую систему для прослушивания.</p>
+                    <div class="card h-100 border-0 shadow-sm text-white text-center"
+                         style="background-image: url('https://i.pinimg.com/1200x/98/33/98/9833986d4160b8ca7a1fd46238fe6612.jpg'); background-size: cover; background-position: center; position: relative;">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(62, 39, 35, 0.75); border-radius: 0.375rem;"></div>
+
+                        <div class="card-body p-4 d-flex flex-column justify-content-center align-items-center position-relative" style="z-index: 1;">
+                            <h3 class="h5 fw-bold mb-3">Выбор оборудования</h3>
+                            <p class="mb-0 small">При бронировании вы выбираете наушники или акустическую систему.</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
-
         <!-- Блок "Из нашей фонотеки" -->
         <section class="container my-5 pt-4 pb-5">
             <div class="d-flex justify-content-between align-items-center mb-4">
@@ -120,15 +143,27 @@
     </main>
 
     <!-- Подвал -->
-    <footer class="bg-loft text-loft-light py-5 mt-5">
+           <!-- Подвал -->
+    <footer class="bg-loft text-loft-light py-5 mt-5 border-top border-dark">
         <div class="container">
-            <div class="row g-4">
+            <div class="row g-4 justify-content-between">
+
+                <!-- 1. Бренд, слоган и права -->
                 <div class="col-12 col-md-4">
                     <h5 class="text-white fw-bold mb-3">Music Only</h5>
-                    <p class="small text-white-50">
-                        If music than music only
+                    <p class="small text-white-50 mb-3">
+                        MO - ваш персональный проводник в мир качественного прослушивания музыки.
+                    </p>
+                    <p class="small text-white-50 mb-4">
+                        <em>If music than music only</em>
+                    </p>
+                    <!-- Права -->
+                    <p class="small text-white-50 mb-0">
+                        &copy; 2026 Music Only. Все права защищены.
                     </p>
                 </div>
+
+                <!-- 2. Контакты -->
                 <div class="col-12 col-md-4">
                     <h5 class="text-white fw-bold mb-3">Контакты</h5>
                     <ul class="list-unstyled small text-white-50">
@@ -136,27 +171,27 @@
                         <li class="mb-2">+7(903)314-16-50</li>
                         <li class="mb-2">+7(903)283-34-71</li>
                         <li class="mb-2">itsmusiconly@inbox.ru</li>
-                        <li>Ежедневно с 12:00 до 00:00</li>
+                        <li>Ежедневно с 12:00 до 00:00 (чт - выходной)</li>
                     </ul>
                 </div>
 
+                <!-- 3. Навигация и документы -->
                 <div class="col-12 col-md-4">
                     <h5 class="text-white fw-bold mb-3">Навигация</h5>
-                    <ul class="list-unstyled small">
+                    <ul class="list-unstyled small mb-4">
                         <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Главная</a></li>
                         <li class="mb-2"><a href="records.html" class="text-white-50 text-decoration-none">Фонотека</a></li>
                         <li class="mb-2"><a href="events.html" class="text-white-50 text-decoration-none">Лекторий</a></li>
                         <li><a href="booking.html" class="text-white-50 text-decoration-none">Бронирование</a></li>
                     </ul>
-                </div>
-            </div>
 
-            <hr class="border-secondary mt-4 mb-3">
-
-            <div class="row">
-                <div class="col-12 text-center text-white-50 small">
-                    <p class="mb-0">&copy; 2026 Music Only.</p>
+                    <!-- Только документы -->
+                    <ul class="list-unstyled small text-white-50">
+                        <li class="mb-1"><a href="#" class="text-white-50 text-decoration-none">Политика конфиденциальности</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Публичная оферта</a></li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     </footer>
