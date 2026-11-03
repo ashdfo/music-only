@@ -105,3 +105,25 @@ body {
 .vinyl-record:hover {
     animation-play-state: paused;
 }
+
+/* Делаем бейджи аккуратными таблетками */
+.badge {
+    display: inline-block !important; /* Запрещаем растягиваться */
+    font-size: 0.75rem;               /* Чуть уменьшаем шрифт */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+/* Если нужно, чтобы в карточке бейдж не был слишком большим */
+.card-body .badge {
+    width: auto !important;           /* Сбрасываем возможную ширину 100% */
+    margin: 0 auto;                   /* Центрируем, если он один */
+}
+/* Фикс для бейджей в карточках, чтобы они были аккуратными сбоку */
+.card-body .badge {
+    display: inline-block !important;
+    width: auto !important;
+    padding: 0.35em 0.65em;
+    border-radius: 0.25rem;
+}
