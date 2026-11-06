@@ -127,3 +127,19 @@ body {
     padding: 0.35em 0.65em;
     border-radius: 0.25rem;
 }
+/* Жестко фиксируем карточки, чтобы они не ломали сетку */
+.card {
+    overflow: hidden !important; /* Обрезаем всё, что пытается вылезти */
+    width: 100%; /* Карточка занимает ровно свою колонку */
+}
+
+/* На всякий случай даем контейнерам правильную ширину */
+.container {
+    max-width: 1320px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
