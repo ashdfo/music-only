@@ -8,6 +8,10 @@
     color: #efebe9 !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Акцентный цвет (карамельный/янтарный) */
 .text-loft-accent {
     color: #ffb300 !important;
@@ -143,3 +147,90 @@ body {
     margin-left: auto;
 }
 
+/* --- Кнопка Наверх --- */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+
+    background-color: #3e2723; /* Темно-коричневый фон */
+    border: 2px solid #c45a3c; /* Терракотовая рамка */
+    border-radius: 50%; /* Идеальный круг */
+
+    /* Скрываем всё, что выходит за пределы круга */
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    z-index: 99999;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+/* Эффект при наведении на кнопку */
+.scroll-top-btn:hover {
+    background-color: #c45a3c;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(196, 90, 60, 0.5);
+}
+
+/* Стили для картинки ВНУТРИ кнопки */
+.scroll-top-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Магия: увеличиваем картинку на 20%, чтобы она вылезла за края и перекрыла белый фон */
+    transform: scale(1.2);
+    filter: brightness(0) invert(1)
+}
+}
+
+/* Делаем картинку белой при наведении (если она черная) */
+.scroll-top-btn:hover img {
+    filter: brightness(0) invert(1);
+}
+/* Фиксация шапки наверху */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030; /* Чтобы меню было поверх карточек и картинок */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень, чтобы отделить от контента */
+}
+/* Фиксация нижней полоски футера */
+footer {
+    position: relative; /* Сам футер оставляем на месте */
+}
+
+/* А вот блок с копирайтом делаем липким */
+footer .container > .row:last-child {
+    position: sticky;
+    bottom: 0;
+    background-color: #3e2723; /* Цвет фона, как у подвала */
+    z-index: 1020;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* Убираем белые полоски по краям экрана */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Заставляем основной контент растягиваться, выталкивая футер вниз */
+main {
+    flex: 1 0 auto;
+}
+
+/* Футер прижимается к низу */
+footer {
+    flex-shrink: 0;
+}

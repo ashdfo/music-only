@@ -27,3 +27,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+// --- Логика кнопки "Наверх" ---
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    if (scrollTopBtn) {
+        // Используем стрелочную функцию и проверяем scrollY
+        window.addEventListener('scroll', function() {
+            // Если прокрутили больше 200 пикселей
+            if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        // Плавный скролл наверх при клике
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
