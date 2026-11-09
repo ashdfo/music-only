@@ -234,3 +234,140 @@ main {
 footer {
     flex-shrink: 0;
 }
+
+/* =========================================
+   ТЕМНАЯ ТЕМА
+   ========================================= */
+
+body.dark-theme {
+    background-color: #1a1514 !important; /* Темный фон */
+    color: #f4f1ea !important; /* Светлый текст */
+}
+
+/* Делаем все светлые секции темными */
+body.dark-theme section,
+body.dark-theme .bg-white,
+body.dark-theme .bg-light,
+body.dark-theme .card,
+body.dark-theme .accordion-item,
+body.dark-theme .accordion-button {
+    background-color: #2b1d1a !important;
+    color: #f4f1ea !important;
+    border-color: #3e2723 !important;
+}
+
+/* Текст в карточках и аккордеоне */
+body.dark-theme .text-dark,
+body.dark-theme .text-muted,
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5 {
+    color: #f4f1ea !important;
+}
+
+/* Поля ввода */
+body.dark-theme .form-control,
+body.dark-theme .form-select {
+    background-color: #1a1514 !important;
+    color: #f4f1ea !important;
+    border-color: #3e2723 !important;
+}
+
+/* Подвал оставляем темным, но чуть выделяем */
+body.dark-theme footer {
+    background-color: #0f0c0b !important;
+}
+
+/* Кнопка переключения темы */
+#theme-toggle {
+    transition: all 0.3s ease;
+}
+#theme-toggle:hover {
+    background-color: #c45a3c;
+    border-color: #c45a3c;
+}
+
+/* Стили для вкладок меню */
+.nav-pills .nav-link.active {
+    background-color: #c45a3c !important; /* Терракотовый фон */
+    color: white !important;
+}
+
+.nav-pills .nav-link {
+    color: #3e2723; /* Темно-коричневый текст для неактивных */
+    border-radius: 50rem; /* Форма таблетки */
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #f4f1ea; /* Легкий фон при наведении */
+}
+/* Стили для кастомных стрелок карусели */
+.custom-carousel-btn {
+    opacity: 1;
+    /* Делаем стрелки темно-коричневыми, как заголовки */
+    color: #3e2723;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* При наведении они становятся терракотовыми и чуть увеличиваются */
+.custom-carousel-btn:hover {
+    color: #c45a3c;
+    transform: scale(1.2);
+}
+
+/* На мобильных телефонах прячем стрелки, чтобы не мешали (там работает свайп) */
+@media (max-width: 768px) {
+    .custom-carousel-btn {
+        display: none;
+    }
+}
+
+/* Фикс цвета для стрелок карусели во всех состояниях */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none !important; /* Прячем стандартные белые иконки Bootstrap */
+}
+
+/* Задаем цвет нашим SVG-стрелкам */
+.custom-carousel-btn svg {
+    color: #3e2723 !important; /* Темно-коричневый */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* При наведении */
+.custom-carousel-btn:hover svg {
+    color: #c45a3c !important; /* Терракотовый */
+    transform: scale(1.2);
+}
+
+/* Если стрелка стала неактивной (например, на первом слайде) — делаем её полупрозрачной, но не белой */
+.carousel-control-prev.disabled svg,
+.carousel-control-next.disabled svg {
+    opacity: 0.3;
+    color: #3e2723 !important;
+}
+
+/* =========================================
+   STICKY-ФИЛЬТР ДЛЯ СТРАНИЦЫ ФОНОТЕКА
+   ========================================= */
+
+/* Прилипание фильтров при прокрутке */
+.catalog-filters {
+    position: sticky;
+    top: 100px; /* Отступ от верха экрана (чтобы не перекрывалось шапкой) */
+    align-self: start; /* Важно для работы внутри Grid-сетки */
+    max-height: calc(100vh - 120px); /* Ограничиваем высоту, чтобы влезало в экран */
+    overflow-y: auto; /* Если фильтров будет много, появится свой скролл */
+}
+
+/* Делаем скроллбар внутри фильтров аккуратным (для Chrome/Safari) */
+.catalog-filters::-webkit-scrollbar {
+    width: 6px;
+}
+.catalog-filters::-webkit-scrollbar-thumb {
+    background-color: #dddddd;
+    border-radius: 4px;
+}
+
