@@ -24,9 +24,11 @@
                     <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Главная</a></li>
                     <li class="nav-item"><a class="nav-link active text-white fw-bold" href="records.html">Фонотека</a></li>
                     <li class="nav-item"><a class="nav-link text-white-50" href="events.html">Лекторий</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="menu.html">Меню</a></li>
                     <li class="nav-item"><a class="nav-link text-white-50" href="contacts.html">Контакты</a></li>
                 </ul>
-                <div class="d-flex mt-3 mt-lg-0">
+                                <div class="d-flex align-items-center mt-3 mt-lg-0 gap-3">
+                    <!-- Кнопка Забронировать (теперь первая в блоке) -->
                     <a href="booking.html" class="btn btn-loft-primary px-4 py-2 fw-bold shadow-sm" style="font-size: 1rem;">Забронировать</a>
                 </div>
             </div>
@@ -38,8 +40,25 @@
         <h2 class="mb-4 fw-bold text-dark">Наша фонотека</h2>
         <p class="text-muted mb-5">Выберите жанр, чтобы посмотреть доступные пластинки. Любую из них можно забронировать для прослушивания в нашем пространстве.</p>
 
+                        <!-- Строка поиска -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-md-6">
+                <!-- Добавили rounded-pill и убрали тени -->
+                <div class="input-group input-group-lg rounded-pill overflow-hidden border shadow-sm bg-white">
+                    <!-- Иконка слева без рамки -->
+                    <span class="input-group-text bg-white border-0 pe-2 ps-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search text-muted" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </span>
+                    <!-- Само поле ввода без рамки -->
+                    <input type="text" id="searchInput" class="form-control border-0 shadow-none ps-2" placeholder="Поиск по названию или исполнителю">
+                </div>
+            </div>
+        </div>
+
         <!-- Аккордеон жанров -->
-        <div class="accordion shadow-sm mb-5" id="accordionGenres">
+        <div class="accordion shadow-sm mb-5 mx-auto" id="accordionGenres" style="max-width: 800px;">
 
             <!-- 1. Классический рок -->
             <div class="accordion-item border-0 mb-3 bg-white">
@@ -547,7 +566,104 @@
                     </div>
                 </div>
             </div>
+                        <!-- 6. Поп-панк -->
+            <div class="accordion-item border-0 mb-3 bg-white">
+                <h3 class="accordion-header" id="headingFunk">
+                    <button class="accordion-button collapsed fw-bold text-dark bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFunk" aria-expanded="false" aria-controls="collapseFunk">
+                        Поп-панк
+                    </button>
+                </h3>
+                <div id="collapseFunk" class="accordion-collapse collapse" aria-labelledby="headingFunk" data-bs-parent="#accordionGenres">
+                    <div class="accordion-body">
+                        <div class="row g-4">
 
+                            <!-- Пластинка 1 -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://i.pinimg.com/736x/8c/b6/b3/8cb6b3bea34b5ddfca36afcaa1e1d601.jpg" class="card-img-top p-3" alt="blink-182" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">blink-182</h4>
+                                        <p class="text-muted small mb-2">blink-182, 2003</p>
+                                        <div class="mt-auto pt-3">
+                                            <p class="fw-bold mb-2">В наличии: 4 шт.</p>
+                                            <a href="booking.html" class="btn btn-sm btn-loft-outline px-4">Забронировать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Пластинка 2 -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://i.pinimg.com/736x/41/3d/44/413d44823d1ba0079eb7365831b232f1.jpg" class="card-img-top p-3" alt="Green Day" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">Revolution Radio</h4>
+                                        <p class="text-muted small mb-2">Green Day, 2016</p>
+                                        <div class="mt-auto pt-3">
+                                            <p class="fw-bold mb-2">В наличии: 6 шт.</p>
+                                            <a href="booking.html" class="btn btn-sm btn-loft-outline px-4">Забронировать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Пластинка 3 -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://i.pinimg.com/736x/a5/4f/84/a54f84394a1e77f4b91f4324677405b9.jpg" class="card-img-top p-3" alt="Sum 41" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">Chuck</h4>
+                                        <p class="text-muted small mb-2">Sum 41, 2004</p>
+                                        <div class="mt-auto pt-3">
+                                            <p class="fw-bold mb-2">В наличии: 3 шт.</p>
+                                            <a href="booking.html" class="btn btn-sm btn-loft-outline px-4">Забронировать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://i.pinimg.com/736x/57/6d/06/576d06f197febe9b246f5389a5fbe8e4.jpg" class="card-img-top p-3" alt="The Offspring" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">Americana</h4>
+                                        <p class="text-muted small mb-2">The Offspring, 1998</p>
+                                        <div class="mt-auto pt-3">
+                                            <p class="fw-bold mb-2">В наличии: 2 шт.</p>
+                                            <a href="booking.html" class="btn btn-sm btn-loft-outline px-4">Забронировать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://i.pinimg.com/1200x/a3/3d/1e/a33d1ec8b4112676d3345d31f10d0f87.jpg" class="card-img-top p-3" alt="Simple Plan" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">Simple Plan</h4>
+                                        <p class="text-muted small mb-2">Simple Plan, 2008</p>
+                                        <div class="mt-auto pt-3">
+                                            <p class="fw-bold mb-2">В наличии: 5 шт.</p>
+                                            <a href="booking.html" class="btn btn-sm btn-loft-outline px-4">Забронировать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 border-0 shadow-sm bg-white">
+                                    <img src="https://i.pinimg.com/736x/80/5f/42/805f4216e23782ff142eb074790a7c0d.jpg" class="card-img-top p-3" alt="Good Charlotte" style="object-fit: contain; height: 200px;">
+                                    <div class="card-body d-flex flex-column text-center">
+                                        <h4 class="h6 fw-bold">The Chronicles of Life and Death</h4>
+                                        <p class="text-muted small mb-2">Good Charlotte, 2004</p>
+                                        <div class="mt-auto pt-3">
+                                            <p class="fw-bold mb-2">В наличии: 1 шт.</p>
+                                            <a href="booking.html" class="btn btn-sm btn-loft-outline px-4">Забронировать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div> <!-- Конец аккордеона -->
     </main>
 
@@ -642,6 +758,80 @@
         <!-- Замените clef.png на название вашей картинки в папке images -->
         <img src="images/винил.png" alt="Наверх" style="width: 30px; height: 30px; object-fit: contain;">
     </a>
+                                        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            if (searchInput) {
+                searchInput.addEventListener('input', function(e) {
+                    const searchText = e.target.value.toLowerCase().trim();
+
+                    // Если поле пустое — показываем всё и закрываем все блоки
+                    if (searchText.length === 0) {
+                        accordionItems.forEach(item => {
+                            item.style.display = 'block';
+
+                            // Показываем все карточки
+                            const cols = item.querySelectorAll('.col-12');
+                            cols.forEach(col => col.style.display = 'block');
+
+                            // Принудительно закрываем аккордеон
+                            const collapseElement = item.querySelector('.accordion-collapse');
+                            if (collapseElement) {
+                                const bsCollapse = bootstrap.Collapse.getInstance(collapseElement);
+                                if (bsCollapse) {
+                                    bsCollapse.hide();
+                                } else {
+                                    collapseElement.classList.remove('show');
+                                }
+                            }
+                        });
+                        return; // Выходим из функции
+                    }
+
+                    // Скролл наверх
+                    window.scrollTo({ top: 200, behavior: 'smooth' });
+
+                    // Логика поиска
+                    accordionItems.forEach(item => {
+                        const cards = item.querySelectorAll('.card');
+                        let hasMatch = false;
+                        const collapseElement = item.querySelector('.accordion-collapse');
+
+                        // Скрываем аккордеон
+                        if (collapseElement) {
+                            const bsCollapse = bootstrap.Collapse.getInstance(collapseElement) || new bootstrap.Collapse(collapseElement, { toggle: false });
+                            bsCollapse.hide();
+                        }
+
+                        cards.forEach(card => {
+                            const cardText = card.textContent.toLowerCase();
+                            const col = card.closest('.col-12');
+
+                            if (cardText.includes(searchText)) {
+                                col.style.display = 'block';
+                                hasMatch = true;
+                            } else {
+                                col.style.display = 'none';
+                            }
+                        });
+
+                        if (hasMatch) {
+                            item.style.display = 'block';
+                            // Открываем аккордеон
+                            if (collapseElement) {
+                                const bsCollapse = bootstrap.Collapse.getInstance(collapseElement) || new bootstrap.Collapse(collapseElement, { toggle: false });
+                                bsCollapse.show();
+                            }
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            }
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

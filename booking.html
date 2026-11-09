@@ -12,7 +12,7 @@
     <!-- Навигация -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-loft border-bottom border-dark py-3">
         <div class="container">
-            <a class="navbar-brand fw-bold text-white" href="index.html">
+            <a class="navbar-brand d-flex align-items-center fw-bold text-white fs-4" href="index.html">
                 <img src="images/логотип MO.png" alt="MO logo" style="height: 40px; width: auto; margin-right: 12px; border-radius: 50%;">
                 MO
             </a>
@@ -20,12 +20,22 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto">
+
+                <!-- Меню слева -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Главная</a></li>
                     <li class="nav-item"><a class="nav-link text-white-50" href="records.html">Фонотека</a></li>
                     <li class="nav-item"><a class="nav-link text-white-50" href="events.html">Лекторий</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="menu.html">Меню</a></li>
                     <li class="nav-item"><a class="nav-link text-white-50" href="contacts.html">Контакты</a></li>
                 </ul>
+
+                <!-- Кнопки справа (выровнены по правому краю благодаря ms-auto) -->
+                <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0 ms-auto">
+
+                    <!-- Кнопка Забронировать (на странице бронирования она темная) -->
+                    <a href="booking.html" class="btn btn-dark border px-4 py-2 fw-bold shadow-sm" style="font-size: 1rem; border-color: #c45a3c !important;">Забронировать</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -93,6 +103,7 @@
                                             <option value="analog">12 ноября — История аналогового звука</option>
                                             <option value="synth">19 ноября — Синтезаторы 80-х: как создавался синти-поп</option>
                                             <option value="asian-rap">3 декабря — Китайский рэп: от андерграунда до стадионов</option>
+                                            <option value="rock-history">10 Декабря, 19:00 — Классический рок: как он изменил мир</option>
                                         </select>
                                     </div>
 
@@ -236,6 +247,17 @@
         <!-- Замените clef.png на название вашей картинки в папке images -->
         <img src="images/винил.png" alt="Наверх" style="width: 30px; height: 30px; object-fit: contain;">
     </a>
+        <!-- Контейнер для всплывающего уведомления (Toast) -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100;">
+        <div id="successToast" class="toast align-items-center text-white border-0 shadow-lg" style="background-color: #c45a3c;" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fs-6">
+                    <strong> Ваша заявка успешно отправлена!</strong> Мы скоро свяжемся с вами.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -262,6 +284,40 @@
             }
         });
     });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ищем форму по классу (на всякий случай, если id отличается)
+            const form = document.querySelector('form');
+
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    // 1. Отменяем перезагрузку страницы
+                    event.preventDefault();
+
+                    // 2. Проверяем валидацию
+                    if (!form.checkValidity()) {
+                        form.reportValidity();
+                        return;
+                    }
+
+                    // 3. Выводим уведомление
+                    const toastElement = document.getElementById('successToast');
+
+                    // Проверка: нашли ли мы само уведомление в HTML
+                    if (toastElement) {
+                        const toast = new bootstrap.Toast(toastElement, { delay: 4000 });
+                        toast.show();
+                    } else {
+                        // Если не нашли, выводим обычный alert (чтобы точно увидеть, что скрипт работает)
+                        alert("Форма отправлена! (Но HTML-блок уведомления не найден)");
+                    }
+
+                    // 4. Очищаем форму
+                    form.reset();
+                });
+            }
+        });
     </script>
 </body>
 </html>
